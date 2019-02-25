@@ -5,11 +5,16 @@
  */
 package coursescheduler;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  *
  * @author patte
  */
 public class CourseScheduler {
+    private static ArrayList<Course> courses;
 
     /**
      * @param args the command line arguments
@@ -31,6 +36,31 @@ public class CourseScheduler {
         System.out.println(course1);
         System.out.println(course2.toString());
         
+        courses = new ArrayList <>();
+        readCourseData(courses, args[0]);
+        
     }
     
+    public static void readCourseData(ArrayList courses, String filename) {
+        try {
+            Scanner read = new Scanner(new File(filename));
+            while (read.hasNext()) {
+                Course c = new Course();
+                c.setName(read.nextLine());
+                c.setSemester(read.nextLine());
+                //gonna come back to this 
+                c.setInstructor(read.nextLine(instructor1));
+                c.setTextbook(text1);
+                courses.add(c);
+            }
+        }
+        catch(java.io.FileNotFoundException ex) {
+            System.err.println("Input file not found");
+            System.exit(-1);
+        }
+        
+        for (int i = 0; i < courses.size(); i++) {
+            System.out.println(courses.get(i));
+        }
+    }
 }
