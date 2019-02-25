@@ -20,6 +20,11 @@ public class CourseScheduler {
         Instructor instructor2 = new Instructor("Brian", "Turman", "Crosby", 209);
         System.out.println(instructor1);
         System.out.println(instructor2.toString());
+        
+        Textbook text1 = new Textbook();
+        Textbook text2 = new Textbook("The Big ol Book of Nothing", "Knot Reel Publishers", 3);
+        System.out.println(text1);
+        System.out.println(text2.toString());
     }
     
 }
