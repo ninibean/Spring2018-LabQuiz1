@@ -18,13 +18,19 @@ public class CourseScheduler {
         // TODO code application logic here
         Instructor instructor1 = new Instructor();
         Instructor instructor2 = new Instructor("Brian", "Turman", "Crosby", 209);
-        System.out.println(instructor1);
-        System.out.println(instructor2.toString());
+        // System.out.println(instructor1);
+        // System.out.println(instructor2.toString());
         
         Textbook text1 = new Textbook();
         Textbook text2 = new Textbook("The Big ol Book of Nothing", "Knot Reel Publishers", 3);
-        System.out.println(text1);
-        System.out.println(text2.toString());
+        // System.out.println(text1);
+        // System.out.println(text2.toString());
+        
+        Course course1 = new Course("Comp Sci", "2", instructor1, text1);
+        Course course2 = new Course("English", "1", instructor2, text2);
+        System.out.println(course1);
+        System.out.println(course2.toString());
+        
     }
     
 }

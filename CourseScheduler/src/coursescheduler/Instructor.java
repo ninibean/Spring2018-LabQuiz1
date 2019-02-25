@@ -30,6 +30,6 @@ public class Instructor {
     }
     
     public String toString() {
-        return firstName + "*" + lastName + "*" + officeBuilding + "*" + roomNum;
+        return firstName + " * " + lastName + " * " + officeBuilding + " * " + roomNum;
     }
 }
